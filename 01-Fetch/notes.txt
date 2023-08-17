@@ -1,0 +1,16 @@
+========
+.fetch()
+========
+
+Fetch can make GET and POST requests but let's look 
+at GET first 
+
+How does fetch work? 
+
+We call fetch()
+
+And pass in a path to a resource
+
+fetch(resoucePath) 
+
+!!!
