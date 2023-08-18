@@ -1,0 +1,7 @@
+In this section we're going to grab free 
+nasa data, from a csv or comma, separated, value 
+file 
+
+Then use a JS library called Chart.js to render 
+the data onto a page 
+
