@@ -6,7 +6,17 @@
     <title>API Practice</title>
   </head>
   <body>
-    <img src="" alt="Pic not loaded?" id="park" width="480" />
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        justify-content: space-between;
+      "
+    >
+      <img src="" alt="Pic not loaded?" id="park" width="480" />
+      <img src="" alt="Pic not loaded?" id="park2" width="480" />
+    </div>
     <p id="txtFile"></p>
     <script>
       console.log("Fetching?");
@@ -20,6 +30,7 @@
         const response = await fetch("Wilson_02.jpg");
         const blob = await response.blob();
         document.getElementById("park").src = URL.createObjectURL(blob);
+        document.getElementById("park2").src = URL.createObjectURL(blob);
       }
 
       async function grabText() {

@@ -1,6 +1,6 @@
-========
+============
 .fetch()
-========
+============
 
 Fetch can make GET and POST requests but let's look 
 at GET first 
