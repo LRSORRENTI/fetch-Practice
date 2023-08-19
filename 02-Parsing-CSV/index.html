@@ -7,7 +7,9 @@
   </head>
 
   <body>
-    <h1>CSV PARSING</h1>
+    <h1>CSV PARSING!</h1>
+
+    <p id="para"></p>
     <script>
       getData().catch((err) => console.log(err));
       // Data from https://data.giss.nasa.gov/gistemp/
@@ -33,10 +35,14 @@
         // 1 to the end of the array, omitting index 0
 
         table.forEach((row) => {
+          //   if ((row = row.includes("Annual", [0]))) {
+          //   }
           const columns = row.split(",");
-          const year = columns[0];
-          const temp = columns[1];
-          console.log(year, temp);
+          const year = columns[(0, 1)];
+          const temp = columns[(1, 2)];
+          console.log(1, year, temp);
+          const para = document.getElementById("para");
+          para.innerText = `Year: ${columns}, Temp: ${row}`;
         });
 
         // console.log(rows);
