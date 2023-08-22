@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "chart.js": "^4.3.3"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
   }
 }

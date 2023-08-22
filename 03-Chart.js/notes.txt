@@ -1,0 +1,10 @@
+==============
+Charting Data
+==============
+
+There are a few different ways we can use 
+in order to display data on a web page, 
+canvas elements and drawing functions,
+p5.js, but we're going to use Chart.js 
+
+
