@@ -2,12 +2,13 @@ import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 
 const ctx = document.getElementById('chart').getContext('2d')
+const xlabels = [];
 new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    labels: xlabels,
     datasets: [{
-      label: '# of Votes',
+      label: 'Combined Land-Surface Air And Sea-Surface Water Temperature In Celcius°',
       data: [12, 19, 3, 5, 2, 3],
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
       borderWidth: 1
@@ -40,7 +41,7 @@ getData().catch((err) => console.log(err));
 async function getData() {
   // const response = await fetch("test.csv");
 
-  const response = await fetch("ZonalAnnualMeans.csv");
+  const response = await fetch("./next.csv");
   // we'll use the .text method to tranform
   // the csv into txt, there are libraries available
   // that can parse csv files and do all the formatting
@@ -64,10 +65,11 @@ async function getData() {
     //   }
     const columns = row.split(",");
     const year = columns[0];
+    xlabels.push(year);
     const temp = columns[1];
     console.log(year, temp);
     const para = document.getElementById("para");
-    para.innerText = `Year: ${year}, Temp: ${temp}`;
+    // para.innerText = `Year: ${year}, Temp: ${temp}`;
   });
 }
 
