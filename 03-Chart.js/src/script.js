@@ -1,5 +1,5 @@
 
-import {chart} from './node_modules/chart.js'
+import {chart} from 'chart.js'
 
 
 
@@ -36,8 +36,6 @@ async function getData() {
     const para = document.getElementById("para");
     para.innerText = `Year: ${columns}, Temp: ${row}`;
   });
-
-  console.log(rows);
 }
 
 export default chart

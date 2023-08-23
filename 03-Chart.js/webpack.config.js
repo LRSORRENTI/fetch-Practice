@@ -12,7 +12,7 @@ const stylesHandler = MiniCssExtractPlugin.loader;
 
 
 const config = {
-    entry: './src/index.js',
+    entry: './src/script.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
     },
