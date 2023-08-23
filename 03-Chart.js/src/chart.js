@@ -23,7 +23,18 @@ console.log(12314)
               }
             ]
           },
-          options: {}
+          options: {
+            scales: {
+                y: {
+                    ticks: {
+                        callback: function(value, index, ticks) {
+                            return  value + '°';
+                        }
+                    }
+                }
+            }
+        }
+          
         });
       }
 
